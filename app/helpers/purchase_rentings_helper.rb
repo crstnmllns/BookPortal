@@ -1,0 +1,2 @@
+module PurchaseRentingsHelper
+end

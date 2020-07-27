@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Purchase Rentings</h1>
+
+<table id="bands">
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>User</th>
+      <th>Book</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @purchase_rentings %>
+  </tbody>
+</table>
+
+<br>
+
+<div id="new-band">
+  <%= link_to 'New Purchase Renting', new_purchase_renting_path, remote: true %>
+</div>

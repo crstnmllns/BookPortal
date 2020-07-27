@@ -1,0 +1,47 @@
+<%= form_with(model: purchase_renting) do |form| %>
+  <% if purchase_renting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(purchase_renting.errors.count, "error") %> prohibited this purchase_renting from being saved:</h2>
+
+      <ul>
+      <% purchase_renting.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <span id="message">Apurate que te queda poco tiempo!</span>
+    <span id="timer"></span>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :book_id %>
+    <%= form.text_field :book_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit data: { confirm: "Petición siendo procesada...", remote: true} %>
+  </div>
+<% end %>

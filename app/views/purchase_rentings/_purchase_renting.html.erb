@@ -1,0 +1,15 @@
+<tr>
+  <td><%= purchase_renting.status %></td>
+  <td><%= purchase_renting.quantity %></td>
+  <td><%= number_to_currency(purchase_renting.price) %></td>
+  <td><%= purchase_renting.user.name %></td>
+  <td><%= purchase_renting.book.bookname %></td>
+  <td><%= link_to 'Show', purchase_renting %></td>
+  <td><%#= link_to 'Edit', edit_purchase_renting_path(purchase_renting), remote: true %></td>
+  <td>
+    <div id="super-edit-<%= purchase_renting.id %>">
+      <%= link_to 'Edit', edit_purchase_renting_path(purchase_renting), remote: true %></td>
+    </div>
+  </td>
+  <td><%= link_to 'Destroy', purchase_renting, method: :delete, data: {remote: true, confirm: 'Are you sure?' }, class: "delete" %></td>
+</tr>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: MyString
+  quantity: 1
+  price: 9.99
+  user: one
+  book: one
+
+two:
+  status: MyString
+  quantity: 1
+  price: 9.99
+  user: two
+  book: two
